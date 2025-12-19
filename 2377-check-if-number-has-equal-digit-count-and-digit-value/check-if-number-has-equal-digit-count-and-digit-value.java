@@ -1,4 +1,4 @@
-class Solution {
+ class Solution {
     public boolean digitCount(String num) {
     int[] freq=new int[10] ;
     for(int i=0;i<num.length();i++){
@@ -11,3 +11,4 @@ class Solution {
 
     return true;}
 }
+    
