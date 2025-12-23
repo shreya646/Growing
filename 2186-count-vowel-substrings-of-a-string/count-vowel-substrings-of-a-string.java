@@ -1,19 +1,21 @@
 class Solution {
     public int countVowelSubstrings(String word) {
+        int count =0;
         int n=word.length();
-        int count=0;
-        for(int i=0;i<n;i++){
-            HashSet<Character> vowel=new HashSet<>();
+          for(int i=0;i<n;i++){
+            HashSet<Character> set=new HashSet<>();
             for(int j=i;j<n;j++){
-                char c=word.charAt(j);
-                if(isvowel(c)) {vowel.add(c);
-                if(vowel.size()==5) count++;
+                char ch=word.charAt(j);
+                if(isvowel(ch)){set.add(ch);
+                if(set.size()==5) count++;
             }
-            else{break;}
-        }}
+            else {break;}
+          }}
+  return count;  }
+  public static boolean isvowel(char k){
+   if(k=='a'||k=='e'||k=='i'||k=='o'||k=='u'){
+    return true;
+   }
 
-    return count;}
-    public static boolean isvowel(char ch){
-        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') return true;
-   return false; }
+ return false; }
 }
